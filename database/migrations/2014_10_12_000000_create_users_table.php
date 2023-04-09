@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('username')->unique();
             $table->string('password');
-            $table->integer('phone_number')->unique();
+            $table->bigInteger('phone_number')->unique();
             $table->timestamp('phone_number_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
