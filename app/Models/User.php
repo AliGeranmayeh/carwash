@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class User extends Authenticatable
 {
@@ -42,8 +43,8 @@ class User extends Authenticatable
     protected $casts = [
         'phone_number_verified_at' => 'datetime',
     ];
-    public function reservation()
+    public function washigType(): HasMany
     {
-        return $this->hasOne(Reservation::class);
+        return $this->hasMany(WashingType::class);
     }
 }
