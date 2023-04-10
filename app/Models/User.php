@@ -42,4 +42,8 @@ class User extends Authenticatable
     protected $casts = [
         'phone_number_verified_at' => 'datetime',
     ];
+    public function reservation()
+    {
+        return $this->hasOne(Reservation::class);
+    }
 }
