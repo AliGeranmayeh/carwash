@@ -20,6 +20,7 @@ return new class extends Migration
             $table->timestamps();
             $table->integer('payment');
             $table->integer('time');
+            $table->integer('state');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
