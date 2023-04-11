@@ -47,4 +47,12 @@ class User extends Authenticatable
     {
         return $this->hasMany(WashingType::class);
     }
+    public function time_reservation(): HasMany
+    {
+        return $this->hasMany(TimeReservation::class);
+    }
+    public function ticket(): HasMany
+    {
+        return $this->hasMany(Ticket::class);
+    }
 }

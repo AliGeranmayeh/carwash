@@ -29,8 +29,8 @@ class WashingType extends Model
     {
         return $this->belongsTo(User::class);
     }
-    public function reservation(): HasOne
+    public function date_reservation(): BelongsTo
     {
-        return $this->hasOne(TimeReservation::class);
+        return $this->belongsTo(DateReservation::class);
     }
 }

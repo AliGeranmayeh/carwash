@@ -10,7 +10,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{__(Auth::user()->name)}}</div>
+                <div class="card-header">Dear {{__(Auth::user()->name)}} please choose your washing methods:</div>
 
                 <div class="card-body">
                     <form action="" method="post">

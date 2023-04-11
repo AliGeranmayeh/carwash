@@ -11,16 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('Washing_Types', function (Blueprint $table) {
+        Schema::create('tickets', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->boolean('car_body');
-            $table->boolean('interior_leaning');
-            $table->boolean('zero_washing');
+            $table->bigInteger("tracking_code");
+            $table->string('date');
+            $table->string('time');
             $table->timestamps();
-            $table->integer('payment');
-            $table->integer('time');
-            $table->integer('state');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
@@ -30,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('Washing_Types');
+        Schema::dropIfExists('tickets');
     }
 };

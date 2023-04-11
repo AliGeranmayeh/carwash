@@ -31,7 +31,7 @@ class HomeController extends Controller
             "error"=> ''
         ]);
     }
-    public function submitForm()
+    public function submitForm(Request $request)
     {
         $total_time = 0;
         $total_payment = 0;
@@ -66,10 +66,11 @@ class HomeController extends Controller
                 $washing_type->interior_leaning=1;
             }
             $washing_type->time = $total_time;
+            $request->session()->put("user_needed_time",$total_time);
             $washing_type->payment = $total_payment;
             $washing_type->save();
             
-            return redirect()->route('time_reservation');
+            return redirect()->route('get_date_reservation');
 
         }
         
