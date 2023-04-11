@@ -34,7 +34,7 @@
                             </label>
                         </div>
                         
-                        <input type="submit" name=submit value="Submit" id="checkBtn">
+                        <input class="my-4" type="submit" name=submit value="Submit" id="checkBtn">
                     </form>
                 </div>
             </div>

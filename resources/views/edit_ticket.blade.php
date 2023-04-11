@@ -31,7 +31,7 @@
                             </label>
                         </div>
                         
-                        <input type="submit" name=submit value="Submit" id="checkBtn">
+                        <input class="my-4" type="submit" name=submit value="Submit" id="checkBtn">
                     </form>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                                 <option value="{{ $i }}">{{ $i }}</option>
                             @endfor
                         </select>
-                        <input class="mb-2" type="submit" name=submit value="Submit" id="checkBtn">
+                        <input class="my-4" type="submit" name=submit value="Submit" id="checkBtn">
                     </form>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                                 <option value = "{{$i}}-{{$i+1}}">{{$i}}-{{$i+1}}</option>
                             @endfor     
                         </select>
-                        <input class="mb-2" type="submit" name=submit value="Submit" id="checkBtn">
+                        <input class="my-4" type="submit" name=submit value="Submit" id="checkBtn">
                     </form>
                 </div>
             </div>

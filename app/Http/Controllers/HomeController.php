@@ -36,7 +36,7 @@ class HomeController extends Controller
         $total_time = 0;
         $total_payment = 0;
         $post = $_POST;
-        if (count($post)==1) {
+        if (count($post)<=2) {
             return view('home',[
                 "total_time" => 0,
                 "total_payment" => 0 ,

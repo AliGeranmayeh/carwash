@@ -20,8 +20,9 @@
                             <option value = "{{$start}}-{{$end}}" {{$active_inputs["$start-$end"]}}>{{$start}}-{{$end}}</option>
                         @endfor     
                     </select>
-                    <input class="mb-2" type="submit" name=submit value="Submit" id="checkBtn">
+                    <input class="my-4" type="submit" name=submit value="Submit" id="checkBtn">
                 </form>
+                <p>Nearest available time: {{$suggestion}}</p>
             </div>
         </div>
     </div>
